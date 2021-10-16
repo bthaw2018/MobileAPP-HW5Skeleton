@@ -1,5 +1,4 @@
 var docurrency = function(){
-
     clean_buttons();
     document.getElementById('currency').classList.add("selected");
 
@@ -12,7 +11,7 @@ var docurrency = function(){
             buildcurrency(currency);
         }
     };
-     url = 'https://api.exchangeratesapi.io/latest?base=USD'
+     url = 'https://api.exchangerate.host/latest?base=USD'
 
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
@@ -24,6 +23,4 @@ function buildcurrency(currency){
     workspace.innerHTML = JSON.stringify(currency);
     //TODO : CURRENCY DATA IS IN JSON OBJECT currency
     //All you need to do is build it into content.
-
-
 }
